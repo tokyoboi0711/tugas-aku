@@ -6,7 +6,7 @@
 		<!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 		<!-- Fonts End -->
 		<link rel="stylesheet" href="src/output.css" />
 		<title>Writeen</title>
@@ -92,22 +92,36 @@
 		</header>
 
 		<main>
-      <section id="1" class="bg-[#00C2CB] w-screen h-[1218px] top-[92px] flex justify-center items-center">
-        <div class="h-fit flex flex-col bg-slate-500">
+      <section id="1" class="bg-[#00C2CB] w-screen h-[1218px] top-[92px] flex flex-col justify-center items-center">
+        <div class="h-fit flex flex-col">
           <div class="w-full flex">
-            <div class="w-[626px] ml-[26px] gap-[40px] text-[#D9F6F7]">
-              <h1 class="font-sserif w-full text-[52px] font-bold leading-[65px]">Siap Sukseskan Perjalanan Kuliahmu?</h1>
-              <p class="mr-[47px] h-fit w-[579px]">Raih Prestasi Akademik Lebih Tinggi dan Temukan
+            <div class="w-[626px] h-fit ml-[26px] flex flex-col gap-[40px] text-[#D9F6F7]">
+              <h1 class="font-crimson w-full text-[52px] font-bold leading-[65px] text-left">Siap Sukseskan Perjalanan Kuliahmu?</h1>
+              <p class="mr-[47px] h-fit w-[579px] font-bold text-[20px] text-left">Raih Prestasi Akademik Lebih Tinggi dan Temukan
                  Passion-mu di Writeen!</p>
-              <div class="text-white ">Sign Up</div>
+              <div
+				class="w-fit h-fit p-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-white bg-[#009BA2] border-[#00747A]">
+				<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
+			  </div>
             </div>
             <div>
-              <img src="assets/logo/Saly-14.svg" alt="sally">
+              <img src="assets/logo/Saly-14.svg" alt="sally" class="ml-[42px] mr-36 top-[-4rem] relative">
             </div>
           </div>
         </div>
-      </section>
-      
+		<div class="flex gap-[46px] flex-col">
+			<div id="card1" class="w-[388px] h-[636px] rounded-2xl px-[26px] gap-[10px] bg-white flex flex-col justify-center items-center">
+				<div class="justify-center items-center flex flex-col px-[40px] pb-[28px]">
+					<div class="w-full px-2 py-4">
+						<h2>E-learning Bersama Tutor Experted</h2>
+					</div>
+					<img src="assets/logo/card-1.svg" alt="" class="ml-[79px] mr-[77px]">
+					<p>Asah Kemampuan menulismu dengan mempublikasi artikel di platform kami.</p>
+				</div>
+			</div>
+		</div>
+      </section> 
+        
 			</section>
 			<section id="2"></section>
 			<section id="3"></section>
@@ -115,6 +129,6 @@
 			<section id="5"></section>
 		</main>
 
-		<footer></footer>
+		<footer></footer>		
 	</body>
 </html>
