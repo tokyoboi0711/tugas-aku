@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+		<!-- Fonts End -->
+		<link rel="stylesheet" href="src/output.css" />
+		<title>Writeen</title>
+	</head>
+	<body class="font-inter flex flex-col box-border">
+		<header>
+			<nav
+				class="w-screen h-fit flex flex-row bg-white gap-[30px] px-[80px] py-[16px] border-b-[1px] border-[#DDE1E6] justify-evenly items-center">
+				<div class="flex gap-[12px] w-fit h-fit items-center">
+					<svg
+						width="33"
+						height="52"
+						viewBox="0 0 33 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M21.5468 32.7394C20.9805 36.6937 17.4071 39.446 13.5727 38.8969C9.73827 38.3479 7.08078 34.7034 7.64701 30.7491C8.21324 26.7948 11.7867 24.0425 15.6211 24.5916C19.4555 25.1406 22.113 28.7851 21.5468 32.7394Z"
+							fill="#FFDE5B"
+							stroke="#145765"
+							stroke-width="0.3" />
+						<circle
+							cx="23.4994"
+							cy="10.0454"
+							r="7.43052"
+							transform="rotate(8.149 23.4994 10.0454)"
+							fill="#FAFAFA"
+							stroke="#145765"
+							stroke-width="0.3" />
+						<circle
+							cx="19.0917"
+							cy="20.5906"
+							r="7.43052"
+							transform="rotate(8.149 19.0917 20.5906)"
+							fill="#FAFAFA"
+							stroke="#145765"
+							stroke-width="0.3" />
+						<mask id="path-4-inside-1_84_411" fill="white">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z" />
+						</mask>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z"
+							fill="#FAFAFA" />
+						<path
+							d="M2.09934 35.4459L1.97423 35.1732L1.70156 35.2983L1.82667 35.571L2.09934 35.4459ZM8.07079 48.4607L7.79812 48.5858L7.92322 48.8585L8.19589 48.7334L8.07079 48.4607ZM21.5762 42.2641L21.7013 42.5368L21.974 42.4117L21.8489 42.139L21.5762 42.2641ZM15.6048 29.2493L15.8774 29.1242L15.7523 28.8516L15.4796 28.9767L15.6048 29.2493ZM22.0572 32.4201C21.7185 34.3752 20.6298 36.0118 19.1369 37.0862L19.4874 37.5732C21.1026 36.4107 22.2818 34.6386 22.6484 32.5225L22.0572 32.4201ZM16.1263 24.0037C20.0882 24.69 22.7436 28.4582 22.0572 32.4201L22.6484 32.5225C23.3914 28.2341 20.5172 24.1554 16.2287 23.4125L16.1263 24.0037ZM7.7099 29.9346C8.39625 25.9727 12.1644 23.3173 16.1263 24.0037L16.2287 23.4125C11.9403 22.6696 7.86162 25.5437 7.1187 29.8322L7.7099 29.9346ZM7.80556 32.8908C7.57749 31.9508 7.53409 30.9494 7.7099 29.9346L7.1187 29.8322C6.9286 30.9295 6.97538 32.0139 7.22248 33.0323L7.80556 32.8908ZM2.22444 35.7186L7.63913 33.2342L7.38892 32.6889L1.97423 35.1732L2.22444 35.7186ZM8.34346 48.3356L2.37201 35.3208L1.82667 35.571L7.79812 48.5858L8.34346 48.3356ZM21.4511 41.9915L7.94568 48.188L8.19589 48.7334L21.7013 42.5368L21.4511 41.9915ZM19.0395 37.4548L21.3035 42.3892L21.8489 42.139L19.5849 37.2046L19.0395 37.4548ZM15.3321 29.3744L19.0395 37.4548L19.5849 37.2046L15.8774 29.1242L15.3321 29.3744ZM7.63913 33.2342L15.7299 29.522L15.4796 28.9767L7.38892 32.6889L7.63913 33.2342ZM13.6408 38.351C10.6937 37.8404 8.46884 35.6244 7.80556 32.8908L7.22248 33.0323C7.94008 35.9898 10.3474 38.3894 13.5384 38.9422L13.6408 38.351ZM19.1369 37.0862C17.6045 38.1892 15.6477 38.6987 13.6408 38.351L13.5384 38.9422C15.7106 39.3185 17.8295 38.7665 19.4874 37.5732L19.1369 37.0862Z"
+							fill="#145765"
+							mask="url(#path-4-inside-1_84_411)" />
+					</svg>
+
+					<p class="font-inter font-bold text-[10px]">
+						<span class="block">Writeen</span>
+						<span class="text-nowrap">Learn. Write. Share. Publish</span>
+					</p>
+				</div>
+				<div class="w-full h-fit flex flex-row-reverse gap-[24px]">
+					<div
+						class="w-fit h-fit font-roboto text-[16px] font-[500] gap-[16px] flex flex-row justify-evenly">
+						<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
+							<div>Home</div>
+						</a>
+						<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
+							<div>Pricing</div>
+						</a>
+						<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
+							<div>More</div>
+						</a>
+					</div>
+				</div>
+
+				<div
+					class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-[#009BA2] border-[#009BA2]">
+					<div class="px-[16px] text-xl">Login</div>
+				</div>
+				<div
+					class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-white border-[#009BA2] bg-[#00C2CB]">
+					<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+      <section id="1" class="bg-[#00C2CB] w-screen h-[1218px] top-[92px] flex justify-center items-center">
+        <div class="h-fit flex flex-col bg-slate-500">
+          <div class="w-full flex">
+            <div class="w-[626px] ml-[26px] gap-[40px] text-[#D9F6F7]">
+              <h1 class="font-sserif w-full text-[52px] font-bold leading-[65px]">Siap Sukseskan Perjalanan Kuliahmu?</h1>
+              <p class="mr-[47px] h-fit w-[579px]">Raih Prestasi Akademik Lebih Tinggi dan Temukan
+                 Passion-mu di Writeen!</p>
+              <div class="text-white ">Sign Up</div>
+            </div>
+            <div>
+              <img src="assets/logo/Saly-14.svg" alt="sally">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+			</section>
+			<section id="2"></section>
+			<section id="3"></section>
+			<section id="4"></section>
+			<section id="5"></section>
+		</main>
+
+		<footer></footer>
+	</body>
+</html>
