@@ -9,7 +9,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 		<!-- Fonts End -->
 		<link rel="stylesheet" href="src/output.css" />
+		<script src="index.js"></script>
+		 <style>
+			@layer utilities {
+			.border-gradient {
+				border-width: 4px;
+				border-style: solid;
+				border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+				}
+			}
+			.scrollbar-hide::-webkit-scrollbar {
+  	    display: none; /* Hide the scrollbar */
+    	}
+    	.scrollbar-hide {
+        scrollbar-width: none;
+			}
+  		</style>
 		<title>Writeen</title>
+
 	</head>
 	<body class="font-inter flex flex-col box-border w-full overflow-x-hidden">
 		<header>
@@ -92,15 +109,16 @@
 		</header>
 
 		<main>
-      <section id="1" class="bg-[#00C2CB] w-full overflow-hidden h-[1218px] top-[92px] flex flex-col justify-center items-center">
+      <section id="1" class="bg-[#00C2CB] w-full overflow-hidden py-40 px-10 flex flex-row justify-around items-center relative">
 				<!-- svg's background start -->
-				 <img src="assets/logo/elips-kanan.svg" alt="" class="absolute top-[723px] right-[0] z-[1]">
-				 <img src="assets/logo/elips-kiri-1.svg" alt="" class="absolute top-[456px] left-[0] z-[1]">
-				 <img src="assets/logo/elips-kiri-2.svg" alt="" class="absolute top-[1087px] left-[29px] z-[1]">
+				 <img src="assets/logo/elips-kanan.svg" alt="" class="absolute top-[640px] right-[0] z-[1]">
+				 <img src="assets/logo/elips-kiri-1.svg" alt="" class="absolute top-[364px] left-[0] z-[1]">
+				 <img src="assets/logo/elips-kiri-2.svg" alt="" class="absolute top-[995px] left-[29px] z-[1]">
+				 <img src="assets/logo/elips-tengah.svg" alt="" class="absolute top-[828px] z-[1]">
 				<!-- svg's background end -->
         <div class="h-fit flex flex-col">
-          <div class="w-full flex justify-center">
-            <div class="w-[626px] ml-[26px] flex flex-col gap-[40px] text-[#D9F6F7]">
+          <div class="w-full flex justify-center z-[2] px-20">
+            <div class="w-full justify-center ml-[26px] mb-10 flex flex-col gap-[40px] text-[#D9F6F7]">
               <h1 class="font-crimson w-full text-[52px] font-bold leading-[65px] text-left">Siap Sukseskan Perjalanan Kuliahmu?</h1>
               <p class="mr-[47px] h-fit w-[579px] font-bold text-[20px] text-left">Raih Prestasi Akademik Lebih Tinggi dan Temukan
                  Passion-mu di Writeen!</p>
@@ -108,16 +126,16 @@
 								<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
 			  			</div>
             </div>
-            <div class="">
-              <img src="assets/logo/Saly-14.svg" alt="sally" class="ml-[42px] mr-36  top relative">
+            <div class="hidden lg:flex w-full justify-center relative">
+              <img src="assets/logo/Saly-14.svg" alt="sally" class="ml-[42px] mr-36 bottom-0 absolute">
             </div>
-          </div>
+        </div>
 					
-					<div class="flex gap-[46px] flex-row top[-40px] z-[2]">
-						<div id="card1" class="w-[388px] h-[636px] overflow-hidden rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
+					<div class="gap-[46px] justify-around z-[2] grid grid-cols-1 px-24 lg:grid-cols-3">
+						<div id="card1" class="w-full h-[636px] overflow-hidden rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
 							<div class="w- justify-center items-center flex flex-col px-[26px] py-[31px] top-[31px]">
 								<div class="w-full px-2 py-4">
-									<h2 class="font-crimson text-[23px] text-[#00747A] font-[1000] leading-[29px]">E-learning Bersama Tutor Experted</h2>
+									<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">E-learning Bersama Tutor Experted</h2>
 								</div>
 								<img src="assets/logo/card-1.svg" alt="" class="ml-[79px] mr-[77px]">
 							</div>
@@ -131,10 +149,10 @@
 								</div>
 							</div>
 						</div>
-						<div id="card2" class="w-[388px] h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
+						<div id="card2" class="w-full h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
 							<div class="justify-center items-center flex flex-col px-[26px] pt-[31px] top-[31px]">
 								<div class="w-full px-2 py-4">
-									<h2 class="font-crimson text-[23px] text-[#00747A] font-[1000] leading-[29px]">Publikasikan Sekarang dan Tunjukkan Karyamu!</h2>
+									<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">Publikasikan Sekarang dan Tunjukkan Karyamu!</h2>
 								</div>
 								<img src="assets/logo/card-2.svg" alt="" class="w-fit h-fit">
 							</div>
@@ -148,10 +166,10 @@
 								</div>
 							</div>
 						</div>
-						<div id="card3" class="w-[388px] h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
+						<div id="card3" class="w-full h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
 							<div class="justify-center items-center flex flex-col px-[26px] py-[31px] mb-4 top-[31px]">
 								<div class="w-full px-2 py-4">
-									<h2 class="font-crimson text-[23px] text-[#00747A] font-[1000] leading-[29px]">Ikuti Tes Gamifikasi Literasi dan Tantang Dirimu!</h2>
+									<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">Ikuti Tes Gamifikasi Literasi dan Tantang Dirimu!</h2>
 								</div>
 								<img src="assets/logo/card-3.svg" alt="">
 							</div>
@@ -170,12 +188,55 @@
       </section> 
         
 			</section>
-			<section id="2"></section>
-			<section id="3"></section>
+			<section id="2" class="px-[271px] py-[124px] flex justify-center items-center">
+				<div class="w-[898px] h-[1063px] overflow-y-auto flex flex-col scrollbar-hide gap-[80px]">
+						<div class="flex flex-col justify-center items-center">
+							<p class="w-full h-fit text-center text-[25px]">Bayangkan bisa lulus cepat dengan predikat cum laude, menghasilkan karya tulis yang berkualitas, dan memiliki karir yang cemerlang di bidang yang Zenteen cintai.</p>
+							<img src="assets/logo/section-2-part1.svg" alt="" class="px-[112px] py-[80px]">
+							<div class="w-full h-[67.52px] flex justify-center items-center">
+									<img src="assets/logo/section-2-panah.svg" alt="" class="w-fit h-fit">
+							</div>
+						</div>
+						<div class="flex flex-col justify-center items-center">
+							<p class="w-full h-fit text-center text-[25px]">Namun, Zenteen masih kesulitan dalam menulis skripsi? Bingung mencari referensi yang relevan? Atau belum menemukan passion yang sebenarnya?</p>
+							<img src="assets/logo/section-2-part2.svg" alt="" class="px-[112px] py-[80px]">
+							<div class="w-full h-[67.52px] flex justify-center items-center">
+									<img src="assets/logo/section-2-panah.svg" alt="" class="w-fit h-fit">
+							</div>
+						</div>
+						<div class="flex flex-col justify-center items-center">
+							<p class="w-full h-fit text-center text-[25px]">Jangan khawatir, kamu tidak sendirian. Writeen hadir untuk membantu Zenteen mencapai impian tersebut melalui pembelajaran literasi yang komprehensif!</p>
+							<img src="assets/logo/section-2-part3.svg" alt="" class="px-[112px] py-[80px]">
+						</div>
+				</div>
+			</section>
+			<section id="3" class="bg-gradient-to-b from-[#00C2CB] to-white w-screen h-[1285px] px-[119px] pt-[236px] pb-[347px] relative">
+				<img src="assets/logo/9.png" alt="" class="absolute top-[160px] left-[-20px] z-20">
+				<div class="z-[2] rounded-[15px] backdrop-blur-[33px] border-[1px] border-white py-[188px] pl-[560px] relative items-center">
+					<div class="relative overflow-auto">
+							<div class="flex transition-transform duration-500 ease-in-out" id="slides">
+								<div class="swiper-slide mr-[151px] h-fit flex flex-col gap-16 w-full">
+									<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">Wadah Kreatif Buat Penulis Zaman Now!</h1>
+									<p class="text-[#004447] text-base text-justify leading-5 mr-16">Writeen adalah one-stop digital media literasi yang berdedikasi untuk membantu generasi muda meraih kesuksesan akademik maupun profesional melalui pendidikan literasi yang berkualitas. Dengan fitur-fitur lengkap dan tutor expert dari berbagai bidang, Writeen siap membimbing dalam setiap langkah perjalanan kesuksesanmu!</p>
+								</div>
+								<div class="swiper-slide mr-[151px] h-fit flex flex-col gap-16 w-full">
+									<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">Tingkatkan Kemampuan Literasimu!</h1>
+									<p class="text-[#004447] text-base text-justify leading-5 mr-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex sunt impedit autem ullam esse iure laudantium, quaerat neque corporis at laborum, possimus, ea quibusdam error doloribus pariatur fuga architecto tempore perspiciatis sit temporibus eveniet. Voluptatem reiciendis est autem ducimus sint veniam sed quas porro.</p>
+								</div>
+								<div class="swiper-slide mr-[151px] h-fit flex flex-col gap-16 w-full">
+									<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">Writeen Keren Banget Wow!</h1>
+									<p class="text-[#004447] text-base text-justify leading-5 mr-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, rem harum quia numquam nostrum magni tempore recusandae ipsum commodi labore. Nobis voluptatum est minima. Ducimus repudiandae explicabo, expedita accusamus nisi hic exercitationem reprehenderit natus dolorem voluptatum quo est fugiat deleniti. Eaque, modi!</p>
+								</div>
+							</div>
+							<img src="assets/logo/arrow-slider-3.svg" alt="" class="absolute top-[312px] right-7 cursor-pointer" id="nextSlide">
+					</div>
+				</div>
+			</section>
 			<section id="4"></section>
 			<section id="5"></section>
 		</main>
 
 		<footer></footer>		
+
 	</body>
 </html>
