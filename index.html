@@ -1,242 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-		<!-- Fonts End -->
-		<link rel="stylesheet" href="src/output.css" />
-		<script src="index.js"></script>
-		 <style>
-			@layer utilities {
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<!-- Fonts End -->
+	<link rel="stylesheet" href="src/output.css" />
+	<script src="index.js"></script>
+	<style>
+		@layer utilities {
 			.border-gradient {
 				border-width: 4px;
 				border-style: solid;
 				border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
-				}
 			}
-			.scrollbar-hide::-webkit-scrollbar {
-  	    display: none; /* Hide the scrollbar */
-    	}
-    	.scrollbar-hide {
-        scrollbar-width: none;
-			}
-  		</style>
-		<title>Writeen</title>
+		}
 
-	</head>
-	<body class="font-inter flex flex-col box-border w-full overflow-x-hidden">
-		<header>
-			<nav
-				class="w-screen h-fit flex flex-row bg-white gap-[30px] px-[80px] py-[16px] border-b-[1px] border-[#DDE1E6] justify-evenly items-center">
-				<div class="flex gap-[12px] w-fit h-fit items-center">
-					<svg
-						width="33"
-						height="52"
-						viewBox="0 0 33 52"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M21.5468 32.7394C20.9805 36.6937 17.4071 39.446 13.5727 38.8969C9.73827 38.3479 7.08078 34.7034 7.64701 30.7491C8.21324 26.7948 11.7867 24.0425 15.6211 24.5916C19.4555 25.1406 22.113 28.7851 21.5468 32.7394Z"
-							fill="#FFDE5B"
-							stroke="#145765"
-							stroke-width="0.3" />
-						<circle
-							cx="23.4994"
-							cy="10.0454"
-							r="7.43052"
-							transform="rotate(8.149 23.4994 10.0454)"
-							fill="#FAFAFA"
-							stroke="#145765"
-							stroke-width="0.3" />
-						<circle
-							cx="19.0917"
-							cy="20.5906"
-							r="7.43052"
-							transform="rotate(8.149 19.0917 20.5906)"
-							fill="#FAFAFA"
-							stroke="#145765"
-							stroke-width="0.3" />
-						<mask id="path-4-inside-1_84_411" fill="white">
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z" />
-						</mask>
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z"
-							fill="#FAFAFA" />
-						<path
-							d="M2.09934 35.4459L1.97423 35.1732L1.70156 35.2983L1.82667 35.571L2.09934 35.4459ZM8.07079 48.4607L7.79812 48.5858L7.92322 48.8585L8.19589 48.7334L8.07079 48.4607ZM21.5762 42.2641L21.7013 42.5368L21.974 42.4117L21.8489 42.139L21.5762 42.2641ZM15.6048 29.2493L15.8774 29.1242L15.7523 28.8516L15.4796 28.9767L15.6048 29.2493ZM22.0572 32.4201C21.7185 34.3752 20.6298 36.0118 19.1369 37.0862L19.4874 37.5732C21.1026 36.4107 22.2818 34.6386 22.6484 32.5225L22.0572 32.4201ZM16.1263 24.0037C20.0882 24.69 22.7436 28.4582 22.0572 32.4201L22.6484 32.5225C23.3914 28.2341 20.5172 24.1554 16.2287 23.4125L16.1263 24.0037ZM7.7099 29.9346C8.39625 25.9727 12.1644 23.3173 16.1263 24.0037L16.2287 23.4125C11.9403 22.6696 7.86162 25.5437 7.1187 29.8322L7.7099 29.9346ZM7.80556 32.8908C7.57749 31.9508 7.53409 30.9494 7.7099 29.9346L7.1187 29.8322C6.9286 30.9295 6.97538 32.0139 7.22248 33.0323L7.80556 32.8908ZM2.22444 35.7186L7.63913 33.2342L7.38892 32.6889L1.97423 35.1732L2.22444 35.7186ZM8.34346 48.3356L2.37201 35.3208L1.82667 35.571L7.79812 48.5858L8.34346 48.3356ZM21.4511 41.9915L7.94568 48.188L8.19589 48.7334L21.7013 42.5368L21.4511 41.9915ZM19.0395 37.4548L21.3035 42.3892L21.8489 42.139L19.5849 37.2046L19.0395 37.4548ZM15.3321 29.3744L19.0395 37.4548L19.5849 37.2046L15.8774 29.1242L15.3321 29.3744ZM7.63913 33.2342L15.7299 29.522L15.4796 28.9767L7.38892 32.6889L7.63913 33.2342ZM13.6408 38.351C10.6937 37.8404 8.46884 35.6244 7.80556 32.8908L7.22248 33.0323C7.94008 35.9898 10.3474 38.3894 13.5384 38.9422L13.6408 38.351ZM19.1369 37.0862C17.6045 38.1892 15.6477 38.6987 13.6408 38.351L13.5384 38.9422C15.7106 39.3185 17.8295 38.7665 19.4874 37.5732L19.1369 37.0862Z"
-							fill="#145765"
-							mask="url(#path-4-inside-1_84_411)" />
-					</svg>
+		.scrollbar-hide::-webkit-scrollbar {
+			display: none;
+			/* Hide the scrollbar */
+		}
 
-					<p class="font-inter font-bold text-[10px]">
-						<span class="block">Writeen</span>
-						<span class="text-nowrap">Learn. Write. Share. Publish</span>
+		.scrollbar-hide {
+			scrollbar-width: none;
+		}
+	</style>
+	<title>Writeen</title>
+
+</head>
+
+<body class="font-inter flex flex-col box-border w-full overflow-x-hidden">
+	<header>
+		<nav
+			class="w-screen h-fit flex flex-row bg-white gap-[30px] px-[80px] py-[16px] border-b-[1px] border-[#DDE1E6] justify-evenly items-center">
+			<div class="flex gap-[12px] w-fit h-fit items-center">
+				<svg width="33" height="52" viewBox="0 0 33 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M21.5468 32.7394C20.9805 36.6937 17.4071 39.446 13.5727 38.8969C9.73827 38.3479 7.08078 34.7034 7.64701 30.7491C8.21324 26.7948 11.7867 24.0425 15.6211 24.5916C19.4555 25.1406 22.113 28.7851 21.5468 32.7394Z"
+						fill="#FFDE5B" stroke="#145765" stroke-width="0.3" />
+					<circle cx="23.4994" cy="10.0454" r="7.43052" transform="rotate(8.149 23.4994 10.0454)"
+						fill="#FAFAFA" stroke="#145765" stroke-width="0.3" />
+					<circle cx="19.0917" cy="20.5906" r="7.43052" transform="rotate(8.149 19.0917 20.5906)"
+						fill="#FAFAFA" stroke="#145765" stroke-width="0.3" />
+					<mask id="path-4-inside-1_84_411" fill="white">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z" />
+					</mask>
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z"
+						fill="#FAFAFA" />
+					<path
+						d="M2.09934 35.4459L1.97423 35.1732L1.70156 35.2983L1.82667 35.571L2.09934 35.4459ZM8.07079 48.4607L7.79812 48.5858L7.92322 48.8585L8.19589 48.7334L8.07079 48.4607ZM21.5762 42.2641L21.7013 42.5368L21.974 42.4117L21.8489 42.139L21.5762 42.2641ZM15.6048 29.2493L15.8774 29.1242L15.7523 28.8516L15.4796 28.9767L15.6048 29.2493ZM22.0572 32.4201C21.7185 34.3752 20.6298 36.0118 19.1369 37.0862L19.4874 37.5732C21.1026 36.4107 22.2818 34.6386 22.6484 32.5225L22.0572 32.4201ZM16.1263 24.0037C20.0882 24.69 22.7436 28.4582 22.0572 32.4201L22.6484 32.5225C23.3914 28.2341 20.5172 24.1554 16.2287 23.4125L16.1263 24.0037ZM7.7099 29.9346C8.39625 25.9727 12.1644 23.3173 16.1263 24.0037L16.2287 23.4125C11.9403 22.6696 7.86162 25.5437 7.1187 29.8322L7.7099 29.9346ZM7.80556 32.8908C7.57749 31.9508 7.53409 30.9494 7.7099 29.9346L7.1187 29.8322C6.9286 30.9295 6.97538 32.0139 7.22248 33.0323L7.80556 32.8908ZM2.22444 35.7186L7.63913 33.2342L7.38892 32.6889L1.97423 35.1732L2.22444 35.7186ZM8.34346 48.3356L2.37201 35.3208L1.82667 35.571L7.79812 48.5858L8.34346 48.3356ZM21.4511 41.9915L7.94568 48.188L8.19589 48.7334L21.7013 42.5368L21.4511 41.9915ZM19.0395 37.4548L21.3035 42.3892L21.8489 42.139L19.5849 37.2046L19.0395 37.4548ZM15.3321 29.3744L19.0395 37.4548L19.5849 37.2046L15.8774 29.1242L15.3321 29.3744ZM7.63913 33.2342L15.7299 29.522L15.4796 28.9767L7.38892 32.6889L7.63913 33.2342ZM13.6408 38.351C10.6937 37.8404 8.46884 35.6244 7.80556 32.8908L7.22248 33.0323C7.94008 35.9898 10.3474 38.3894 13.5384 38.9422L13.6408 38.351ZM19.1369 37.0862C17.6045 38.1892 15.6477 38.6987 13.6408 38.351L13.5384 38.9422C15.7106 39.3185 17.8295 38.7665 19.4874 37.5732L19.1369 37.0862Z"
+						fill="#145765" mask="url(#path-4-inside-1_84_411)" />
+				</svg>
+
+				<p class="font-inter font-bold text-[10px]">
+					<span class="block">Writeen</span>
+					<span class="text-nowrap">Learn. Write. Share. Publish</span>
+				</p>
+			</div>
+			<div class="w-full h-fit flex flex-row-reverse gap-[24px]">
+				<div class="w-fit h-fit font-roboto text-[16px] font-[500] gap-[16px] flex flex-row justify-evenly">
+					<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
+						<div>Home</div>
+					</a>
+					<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
+						<div>Pricing</div>
+					</a>
+					<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
+						<div>More</div>
+					</a>
+				</div>
+			</div>
+
+			<div
+				class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-[#009BA2] border-[#009BA2]">
+				<div class="px-[16px] text-xl">Login</div>
+			</div>
+			<div
+				class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-white border-[#009BA2] bg-[#00C2CB]">
+				<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section id="1"
+			class="bg-[#00C2CB] w-full overflow-hidden py-40 px-10 flex flex-row justify-around items-center relative">
+			<!-- svg's background start -->
+			<img src="assets/logo/elips-kanan.svg" alt="" class="absolute top-[640px] right-[0] z-[1]">
+			<img src="assets/logo/elips-kiri-1.svg" alt="" class="absolute top-[364px] left-[0] z-[1]">
+			<img src="assets/logo/elips-kiri-2.svg" alt="" class="absolute top-[995px] left-[29px] z-[1]">
+			<img src="assets/logo/elips-tengah.svg" alt="" class="absolute top-[828px] z-[1]">
+			<img src="assets/logo/roket-sec-1.svg" alt="" class="absolute top-[15px] right-[52px] z-[1]">
+			<img src="assets/logo/Meliuk-liuk.svg" alt="" class="absolute top-[129px] right-[-121px] z-0">
+			<!-- svg's background end -->
+			<div class="h-fit flex flex-col">
+				<div class="w-full flex justify-center z-[2] px-20">
+					<div class="w-full justify-center ml-[26px] mb-10 flex flex-col gap-[40px] text-[#D9F6F7]">
+						<h1 class="font-crimson w-full text-[52px] font-bold leading-[65px] text-left">Siap Sukseskan
+							Perjalanan Kuliahmu?</h1>
+						<p class="mr-[47px] h-fit w-[579px] font-bold text-[20px] text-left">Raih Prestasi Akademik
+							Lebih Tinggi dan Temukan
+							Passion-mu di Writeen!</p>
+						<div
+							class="w-fit h-fit p-[13px]  flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-white bg-[#009BA2] border-[#00747A]">
+							<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
+						</div>
+					</div>
+					<div class="hidden lg:flex w-full justify-center relative">
+						<img src="assets/logo/Saly-14.svg" alt="sally" class="ml-[42px] mr-36 bottom-0 absolute">
+					</div>
+				</div>
+
+				<div class="gap-[46px] justify-around z-[2] grid grid-cols-1 px-24 lg:grid-cols-3">
+					<div id="card1"
+						class="w-full h-[636px] overflow-hidden rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
+						<div class="w- justify-center items-center flex flex-col px-[26px] py-[31px] top-[31px]">
+							<div class="w-full px-2 py-4">
+								<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">E-learning
+									Bersama Tutor Experted</h2>
+							</div>
+							<img src="assets/logo/card-1.svg" alt="" class="ml-[79px] mr-[77px]">
+						</div>
+						<div class="w-fit h-fit px-[39px] py-[28px]">
+							<div class="flex flex-col items-center justify-center h-full gap-[30px]">
+								<p class="text-[16px] text-[#009BA2] leading-[19.36px] font-[400]">Asah kemampuan
+									menulismu dengan mempublikasikan artikel di platform kami.
+								</p>
+								<div
+									class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
+									<div
+										class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
+										Selengkapnya</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="card2"
+						class="w-full h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
+						<div class="justify-center items-center flex flex-col px-[26px] pt-[31px] top-[31px]">
+							<div class="w-full px-2 py-4">
+								<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">Publikasikan
+									Sekarang dan Tunjukkan Karyamu!</h2>
+							</div>
+							<img src="assets/logo/card-2.svg" alt="" class="w-fit h-fit">
+						</div>
+						<div class="px-[39px] pb-[28px]">
+							<div class="flex flex-col justify-center items-center gap-[30px]">
+								<p class="text-[16px] text-[#009BA2] leading-[19.36px] font-[400]">Belajar menulis
+									secara efektif dan efisien dengan bimbingan langsung dari para ahli di bidangnya.
+								</p>
+								<div
+									class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
+									<div
+										class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
+										Selengkapnya</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="card3"
+						class="w-full h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
+						<div class="justify-center items-center flex flex-col px-[26px] py-[31px] mb-4 top-[31px]">
+							<div class="w-full px-2 py-4">
+								<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">Ikuti Tes
+									Gamifikasi Literasi dan Tantang Dirimu!</h2>
+							</div>
+							<img src="assets/logo/card-3.svg" alt="">
+						</div>
+						<div class="px-[39px] py-[32px]">
+							<div class="flex flex-col justify-center items-center gap-[30px]">
+								<p class="text-[16px] text-[#009BA2] leading-[19.36px] font-[400]">Temukan minat dan
+									bakat literasimu melalui tes yang seru dan interaktif.
+								</p>
+								<div
+									class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
+									<div
+										class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
+										Selengkapnya</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		</section>
+		<section id="2" class="px-[271px] py-[124px] flex justify-center items-center">
+			<div class="w-[898px] h-[1063px] overflow-y-auto flex flex-col scrollbar-hide gap-[80px] relative">
+				<div class="absolute w-full h-fit rounded-full bg-[#D9F6F7] z-10"></div>
+				<div class="flex flex-col justify-center items-center">
+					<p class="w-full h-fit text-center text-[25px]">Bayangkan bisa lulus cepat dengan predikat cum
+						laude, menghasilkan karya tulis yang berkualitas, dan memiliki karir yang cemerlang di bidang
+						yang Zenteen cintai.</p>
+					<img src="assets/logo/section-2-part1.svg" alt="" class="px-[112px] py-[80px]">
+					<div class="w-full h-[67.52px] flex justify-center items-center">
+						<img src="assets/logo/section-2-panah.svg" alt="" class="w-fit h-fit">
+					</div>
+				</div>
+				<div class="flex flex-col justify-center items-center">
+					<p class="w-full h-fit text-center text-[25px]">Namun, Zenteen masih kesulitan dalam menulis
+						skripsi? Bingung mencari referensi yang relevan? Atau belum menemukan passion yang sebenarnya?
 					</p>
-				</div>
-				<div class="w-full h-fit flex flex-row-reverse gap-[24px]">
-					<div
-						class="w-fit h-fit font-roboto text-[16px] font-[500] gap-[16px] flex flex-row justify-evenly">
-						<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
-							<div>Home</div>
-						</a>
-						<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
-							<div>Pricing</div>
-						</a>
-						<a href="#" class="w-fit h-fit px-[8px] py-[12px]">
-							<div>More</div>
-						</a>
+					<img src="assets/logo/section-2-part2.svg" alt="" class="px-[112px] py-[80px]">
+					<div class="w-full h-[67.52px] flex justify-center items-center">
+						<img src="assets/logo/section-2-panah.svg" alt="" class="w-fit h-fit">
 					</div>
 				</div>
-
-				<div
-					class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-[#009BA2] border-[#009BA2]">
-					<div class="px-[16px] text-xl">Login</div>
+				<div class="flex flex-col justify-center items-center">
+					<p class="w-full h-fit text-center text-[25px]">Jangan khawatir, kamu tidak sendirian. Writeen hadir
+						untuk membantu Zenteen mencapai impian tersebut melalui pembelajaran literasi yang komprehensif!
+					</p>
+					<img src="assets/logo/section-2-part3.svg" alt="" class="px-[112px] py-[80px]">
 				</div>
-				<div
-					class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-white border-[#009BA2] bg-[#00C2CB]">
-					<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
-				</div>
-			</nav>
-		</header>
-
-		<main>
-      <section id="1" class="bg-[#00C2CB] w-full overflow-hidden py-40 px-10 flex flex-row justify-around items-center relative">
-				<!-- svg's background start -->
-				 <img src="assets/logo/elips-kanan.svg" alt="" class="absolute top-[640px] right-[0] z-[1]">
-				 <img src="assets/logo/elips-kiri-1.svg" alt="" class="absolute top-[364px] left-[0] z-[1]">
-				 <img src="assets/logo/elips-kiri-2.svg" alt="" class="absolute top-[995px] left-[29px] z-[1]">
-				 <img src="assets/logo/elips-tengah.svg" alt="" class="absolute top-[828px] z-[1]">
-				<!-- svg's background end -->
-        <div class="h-fit flex flex-col">
-          <div class="w-full flex justify-center z-[2] px-20">
-            <div class="w-full justify-center ml-[26px] mb-10 flex flex-col gap-[40px] text-[#D9F6F7]">
-              <h1 class="font-crimson w-full text-[52px] font-bold leading-[65px] text-left">Siap Sukseskan Perjalanan Kuliahmu?</h1>
-              <p class="mr-[47px] h-fit w-[579px] font-bold text-[20px] text-left">Raih Prestasi Akademik Lebih Tinggi dan Temukan
-                 Passion-mu di Writeen!</p>
-              <div class="w-fit h-fit p-[13px]  flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-white bg-[#009BA2] border-[#00747A]">
-								<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
-			  			</div>
-            </div>
-            <div class="hidden lg:flex w-full justify-center relative">
-              <img src="assets/logo/Saly-14.svg" alt="sally" class="ml-[42px] mr-36 bottom-0 absolute">
-            </div>
-        </div>
-					
-					<div class="gap-[46px] justify-around z-[2] grid grid-cols-1 px-24 lg:grid-cols-3">
-						<div id="card1" class="w-full h-[636px] overflow-hidden rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
-							<div class="w- justify-center items-center flex flex-col px-[26px] py-[31px] top-[31px]">
-								<div class="w-full px-2 py-4">
-									<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">E-learning Bersama Tutor Experted</h2>
-								</div>
-								<img src="assets/logo/card-1.svg" alt="" class="ml-[79px] mr-[77px]">
-							</div>
-							<div class="w-fit h-fit px-[39px] py-[28px]">
-								<div class="flex flex-col items-center justify-center h-full gap-[30px]">
-									<p class="text-[16px] text-[#009BA2] leading-[19.36px] font-[400]">Asah kemampuan menulismu dengan mempublikasikan artikel di platform kami.
-									</p>
-									<div class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
-										<div class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">Selengkapnya</div>
-									</div>
-								</div>
-							</div>
+			</div>
+		</section>
+		<section id="3"
+			class="bg-gradient-to-b from-[#00C2CB] to-white w-screen h-[1285px] px-[119px] pt-[236px] pb-[347px] relative">
+			<img src="assets/logo/9.png" alt="" class="absolute top-[160px] left-[-20px] z-10">
+			<div
+				class="h-[702px] z-[2] rounded-[15px] backdrop-blur-[33px] border-[1px] border-white py-[188px] pl-[560px] relative overflow-hidden">
+				<div id="slidesContainer" class="relative w-[491px] h-full overflow-auto scrollbar-hide">
+					<div id="slides" class="flex transition-transform duration-500 ease-in-out w-[300%]">
+						<div class="slide h-fit flex flex-col gap-16 w-1/3">
+							<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">
+								Wadah Kreatif Buat Penulis Zaman Now!
+							</h1>
+							<p class="text-[#004447] text-base text-justify leading-5 mr-16">
+								Writeen adalah one-stop digital media literasi yang berdedikasi untuk membantu generasi
+								muda meraih
+								kesuksesan akademik maupun profesional melalui pendidikan literasi yang berkualitas...
+							</p>
 						</div>
-						<div id="card2" class="w-full h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
-							<div class="justify-center items-center flex flex-col px-[26px] pt-[31px] top-[31px]">
-								<div class="w-full px-2 py-4">
-									<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">Publikasikan Sekarang dan Tunjukkan Karyamu!</h2>
-								</div>
-								<img src="assets/logo/card-2.svg" alt="" class="w-fit h-fit">
-							</div>
-							<div class="px-[39px] pb-[28px]">
-								<div class="flex flex-col justify-center items-center gap-[30px]">
-									<p class="text-[16px] text-[#009BA2] leading-[19.36px] font-[400]">Belajar menulis secara efektif dan efisien dengan bimbingan langsung dari para ahli di bidangnya.
-									</p>
-									<div class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
-										<div class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">Selengkapnya</div>
-									</div>
-								</div>
-							</div>
+						<div class="slide h-fit flex flex-col gap-16 w-1/3">
+							<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">
+								Tingkatkan Kemampuan Literasimu!
+							</h1>
+							<p class="text-[#004447] text-base text-justify leading-5 mr-16">
+								Lorem ipsum dolor sit amet...
+							</p>
 						</div>
-						<div id="card3" class="w-full h-[636px] rounded-2xl gap-[10px] bg-white flex flex-col justify-center items-center shadow-custom-card">
-							<div class="justify-center items-center flex flex-col px-[26px] py-[31px] mb-4 top-[31px]">
-								<div class="w-full px-2 py-4">
-									<h2 class="font-crimson text-3xl text-[#00747A] font-[1000] leading-[29px]">Ikuti Tes Gamifikasi Literasi dan Tantang Dirimu!</h2>
-								</div>
-								<img src="assets/logo/card-3.svg" alt="">
-							</div>
-							<div class="px-[39px] py-[32px]">
-								<div class="flex flex-col justify-center items-center gap-[30px]">
-									<p class="text-[16px] text-[#009BA2] leading-[19.36px] font-[400]">Temukan minat dan bakat literasimu melalui tes yang seru dan interaktif.
-									</p>
-									<div class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
-										<div class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">Selengkapnya</div>
-									</div>
-								</div>
-							</div>
+						<div class="slide h-fit flex flex-col gap-16 w-1/3">
+							<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">
+								Writeen Keren Banget Wow!
+							</h1>
+							<p class="text-[#004447] text-base text-justify leading-5 mr-16">
+								Lorem ipsum dolor sit amet...
+							</p>
 						</div>
 					</div>
-        </div>
-      </section> 
-        
-			</section>
-			<section id="2" class="px-[271px] py-[124px] flex justify-center items-center">
-				<div class="w-[898px] h-[1063px] overflow-y-auto flex flex-col scrollbar-hide gap-[80px]">
-						<div class="flex flex-col justify-center items-center">
-							<p class="w-full h-fit text-center text-[25px]">Bayangkan bisa lulus cepat dengan predikat cum laude, menghasilkan karya tulis yang berkualitas, dan memiliki karir yang cemerlang di bidang yang Zenteen cintai.</p>
-							<img src="assets/logo/section-2-part1.svg" alt="" class="px-[112px] py-[80px]">
-							<div class="w-full h-[67.52px] flex justify-center items-center">
-									<img src="assets/logo/section-2-panah.svg" alt="" class="w-fit h-fit">
-							</div>
-						</div>
-						<div class="flex flex-col justify-center items-center">
-							<p class="w-full h-fit text-center text-[25px]">Namun, Zenteen masih kesulitan dalam menulis skripsi? Bingung mencari referensi yang relevan? Atau belum menemukan passion yang sebenarnya?</p>
-							<img src="assets/logo/section-2-part2.svg" alt="" class="px-[112px] py-[80px]">
-							<div class="w-full h-[67.52px] flex justify-center items-center">
-									<img src="assets/logo/section-2-panah.svg" alt="" class="w-fit h-fit">
-							</div>
-						</div>
-						<div class="flex flex-col justify-center items-center">
-							<p class="w-full h-fit text-center text-[25px]">Jangan khawatir, kamu tidak sendirian. Writeen hadir untuk membantu Zenteen mencapai impian tersebut melalui pembelajaran literasi yang komprehensif!</p>
-							<img src="assets/logo/section-2-part3.svg" alt="" class="px-[112px] py-[80px]">
-						</div>
 				</div>
-			</section>
-			<section id="3" class="bg-gradient-to-b from-[#00C2CB] to-white w-screen h-[1285px] px-[119px] pt-[236px] pb-[347px] relative">
-				<img src="assets/logo/9.png" alt="" class="absolute top-[160px] left-[-20px] z-20">
-				<div class="z-[2] rounded-[15px] backdrop-blur-[33px] border-[1px] border-white py-[188px] pl-[560px] relative items-center">
-					<div class="relative overflow-auto">
-							<div class="flex transition-transform duration-500 ease-in-out" id="slides">
-								<div class="swiper-slide mr-[151px] h-fit flex flex-col gap-16 w-full">
-									<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">Wadah Kreatif Buat Penulis Zaman Now!</h1>
-									<p class="text-[#004447] text-base text-justify leading-5 mr-16">Writeen adalah one-stop digital media literasi yang berdedikasi untuk membantu generasi muda meraih kesuksesan akademik maupun profesional melalui pendidikan literasi yang berkualitas. Dengan fitur-fitur lengkap dan tutor expert dari berbagai bidang, Writeen siap membimbing dalam setiap langkah perjalanan kesuksesanmu!</p>
-								</div>
-								<div class="swiper-slide mr-[151px] h-fit flex flex-col gap-16 w-full">
-									<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">Tingkatkan Kemampuan Literasimu!</h1>
-									<p class="text-[#004447] text-base text-justify leading-5 mr-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex sunt impedit autem ullam esse iure laudantium, quaerat neque corporis at laborum, possimus, ea quibusdam error doloribus pariatur fuga architecto tempore perspiciatis sit temporibus eveniet. Voluptatem reiciendis est autem ducimus sint veniam sed quas porro.</p>
-								</div>
-								<div class="swiper-slide mr-[151px] h-fit flex flex-col gap-16 w-full">
-									<h1 class="font-crimson text-[52px] font-[1000] text-[#00575B] leading-[65px]">Writeen Keren Banget Wow!</h1>
-									<p class="text-[#004447] text-base text-justify leading-5 mr-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, rem harum quia numquam nostrum magni tempore recusandae ipsum commodi labore. Nobis voluptatum est minima. Ducimus repudiandae explicabo, expedita accusamus nisi hic exercitationem reprehenderit natus dolorem voluptatum quo est fugiat deleniti. Eaque, modi!</p>
-								</div>
-							</div>
-							<img src="assets/logo/arrow-slider-3.svg" alt="" class="absolute top-[312px] right-7 cursor-pointer" id="nextSlide">
+				<img src="assets/logo/arrow-slider-3.svg" alt="Next" class="absolute top-80 right-7 cursor-pointer"
+					id="nextSlide">
+
+			</div>
+
+		</section>
+		<section id="4" class="flex flex-col justify-center">
+			<div class="h-fit mx-[312px] mt-32 flex flex-col gap-10 justify-center">
+				<h1 class="font-crimson font-bold text-center text-[60px] text-[#00575B]">Panggilan terakhir untuk 100
+					orang pertama!
+				</h1>
+				<p class="mx-[56px] text-center w-fitmmnnm text-[20px] leading-6 justify-center text-[#00575B]">Dapatkan
+					Semua Fitur Lengkap Hanya dengan
+					Rp33.000/bulan! Dengan berlangganan, Zenteen akan mendapatkan akses tanpa
+					batas ke semua fitur Written!</p>
+			</div>
+			<div
+				class="rounded-[15px] mt-[105px] mb-[88px] mx-[150px] px-[88px] py-[45px] items-center justify-around bg-[#FFF6DB] shadow-custom-card2">
+				<div class="grid grid-cols-1 lg:grid-cols-4 gap-[65px]">
+					<div id="days"
+						class="flex bg-white shadow-custom-card3 justify-around w-full h-[264px] items-center rounded-[15px]">
+						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
+					</div>
+					<div id="hours"
+						class="flex bg-white shadow-custom-card3 justify-around h-[264px] items-center rounded-[15px]">
+						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
+					</div>
+					<div id="minutes"
+						class="flex bg-white shadow-custom-card3 justify-around h-[264px] items-center rounded-[15px]">
+						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
+					</div>
+					<div id="seconds"
+						class="flex bg-white shadow-custom-card3 justify-around h-[264px] items-center rounded-[15px]">
+						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
 					</div>
 				</div>
-			</section>
-			<section id="4"></section>
-			<section id="5"></section>
-		</main>
+			</div>
+			<div class="flex flex-row gap-[50px] mt-[105px] mb-[88px] mx-[150px] justify-center">
+				<div class="flex flex-col gap-[23px] w-full justify-center">
+					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
+						<div class="flex flex-row gap-8 justify-evenly items-center">
+							<div><img src="assets/logo/kunci-sec-4.svg" alt="" class="w-full"></div>
+							<div>
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
+									premium</p>
+							</div>
+							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+						</div>
+					</div>
+					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
+						<div class="flex flex-row gap-8 justify-evenly items-center">
+							<div><img src="assets/logo/buku-sec4.svg" alt="" class="w-full"></div>
+							<div>
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
+									premium</p>
+							</div>
+							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+						</div>
+					</div>
+					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
+						<div class="flex flex-row gap-8 justify-evenly items-center">
+							<div><img src="assets/logo/dunia-sec4.svg" alt="" class="w-full"></div>
+							<div>
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
+									premium</p>
+							</div>
+							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+						</div>
+					</div>
+					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
+						<div class="flex flex-row gap-8 justify-evenly items-center">
+							<div><img src="assets/logo/bintang-sec4.svg" alt="" class="w-full"></div>
+							<div>
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
+									premium</p>
+							</div>
+							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+						</div>
+					</div>
+					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
+						<div class="flex flex-row gap-8 justify-evenly items-center">
+							<div><img src="assets/logo/pena-sec4.svg" alt="" class="w-full"></div>
+							<div>
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
+									premium</p>
+							</div>
+							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+						</div>
+					</div>
+				</div>
+				<img src="assets/logo/oke-section4.svg" alt="" class="w-fit h-fit">
+			</div>
+		</section>
+		<section id="5"></section>
+	</main>
 
-		<footer></footer>		
+	<footer></footer>
 
-	</body>
+</body>
+
 </html>

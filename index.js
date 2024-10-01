@@ -1,18 +1,67 @@
-let currentIndex = 0;
-const slides = document.getElementById("slides");
-const totalSlides = slides.children.length;
+// Wait for the DOM to load before running the script
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
 
-document.getElementById("nextSlide").addEventListener("click", () => {
-	currentIndex = (currentIndex + 1) % totalSlides;
-	updateSlidePosition();
+    // Check if the 'slides' element exists
+    const slidesContainer = document.getElementById('slides');
+    
+    if (slidesContainer) {
+        // Set the width of the slides container based on the number of slides
+        slidesContainer.style.width = `${totalSlides * 100}%`;
+
+        // Next Slide Button
+        const nextSlideArrow = document.getElementById('nextSlide');
+        
+        // Check if the nextSlideArrow exists
+        if (nextSlideArrow) {
+            nextSlideArrow.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides; // Cycle to the next slide
+                updateSlides();
+            });
+        }
+
+        function updateSlides() {
+            const offset = -currentSlide * (100 / totalSlides); // Move slides left
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+        }
+    } else {
+        console.error('Slides container not found!');
+    }
 });
 
-document.getElementById("prevSlide").addEventListener("click", () => {
-	currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-	updateSlidePosition();
-});
 
-function updateSlidePosition() {
-	const offset = -currentIndex * (100 + 151); // Adjust offset based on width and margin
-	slides.style.transform = `translateX(${offset}%)`;
-}
+// Set the date we're counting down to (example: 10 minutes from now)
+const countdownDate = new Date().getTime() + 9999 * 60 * 1000; // 10 minutes in milliseconds
+
+// Update the countdown every second
+const countdownFunction = setInterval(() => {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Find the time difference
+  const timeLeft = countdownDate - now;
+
+  // Time calculations for days, hours, minutes, and seconds
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  // Display the results in their respective <div> elements
+  // Update the <h1> inside the respective divs
+  document.querySelector("#days h1").innerHTML = days;
+  document.querySelector("#hours h1").innerHTML = hours;
+  document.querySelector("#minutes h1").innerHTML = minutes;
+  document.querySelector("#seconds h1").innerHTML = seconds;
+
+  // If the countdown is over, stop the timer and reset to zero
+  if (timeLeft < 0) {
+    clearInterval(countdownFunction);
+    document.querySelector("#days h1").innerHTML = "0";
+    document.querySelector("#hours h1").innerHTML = "0";
+    document.querySelector("#minutes h1").innerHTML = "0";
+    document.querySelector("#seconds h1").innerHTML = "0";
+  }
+}, 1000);
