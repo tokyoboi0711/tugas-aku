@@ -65,3 +65,15 @@ const countdownFunction = setInterval(() => {
     document.querySelector("#seconds h1").innerHTML = "0";
   }
 }, 1000);
+
+function toggleDropdown(index) {
+    const dropdown = document.getElementById(`dropdown-sec4-${index}`);
+    
+    // Atur tinggi maksimal untuk slide up atau slide down
+    if (dropdown.style.maxHeight) {
+      dropdown.style.maxHeight = null;
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+    }
+  }
+  

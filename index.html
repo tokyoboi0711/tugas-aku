@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&&display=swap"
 		rel="stylesheet">
 	<!-- Fonts End -->
 	<link rel="stylesheet" href="src/output.css" />
@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="font-inter flex flex-col box-border w-full overflow-x-hidden">
+<body class="font-inter flex flex-col box-border w-full overflow-x-hidden md:w-full sm:w-full">
 	<header>
 		<nav
 			class="w-screen h-fit flex flex-row bg-white gap-[30px] px-[80px] py-[16px] border-b-[1px] border-[#DDE1E6] justify-evenly items-center">
@@ -44,10 +44,10 @@
 					<path
 						d="M21.5468 32.7394C20.9805 36.6937 17.4071 39.446 13.5727 38.8969C9.73827 38.3479 7.08078 34.7034 7.64701 30.7491C8.21324 26.7948 11.7867 24.0425 15.6211 24.5916C19.4555 25.1406 22.113 28.7851 21.5468 32.7394Z"
 						fill="#FFDE5B" stroke="#145765" stroke-width="0.3" />
-					<circle cx="23.4994" cy="10.0454" r="7.43052" transform="rotate(8.149 23.4994 10.0454)"
-						fill="#FAFAFA" stroke="#145765" stroke-width="0.3" />
-					<circle cx="19.0917" cy="20.5906" r="7.43052" transform="rotate(8.149 19.0917 20.5906)"
-						fill="#FAFAFA" stroke="#145765" stroke-width="0.3" />
+					<circle cx="23.4994" cy="10.0454" r="7.43052" transform="rotate(8.149 23.4994 10.0454)" fill="#FAFAFA"
+						stroke="#145765" stroke-width="0.3" />
+					<circle cx="19.0917" cy="20.5906" r="7.43052" transform="rotate(8.149 19.0917 20.5906)" fill="#FAFAFA"
+						stroke="#145765" stroke-width="0.3" />
 					<mask id="path-4-inside-1_84_411" fill="white">
 						<path fill-rule="evenodd" clip-rule="evenodd"
 							d="M19.3122 37.3297C20.8662 36.2112 22.0002 34.5069 22.3528 32.4713C23.0675 28.3461 20.3027 24.4227 16.1775 23.7081C12.0524 22.9934 8.12894 25.7582 7.4143 29.8834C7.23134 30.9395 7.27644 31.9823 7.51402 32.9615L2.09934 35.4459L8.07079 48.4607L21.5762 42.2641L19.3122 37.3297ZM19.3122 37.3297L15.6048 29.2493L7.51402 32.9615C8.20446 35.8071 10.5205 38.1149 13.5896 38.6466C15.6792 39.0086 17.717 38.4778 19.3122 37.3297Z" />
@@ -79,14 +79,21 @@
 				</div>
 			</div>
 
-			<div
-				class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-[#009BA2] border-[#009BA2]">
-				<div class="px-[16px] text-xl">Login</div>
-			</div>
-			<div
-				class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-white border-[#009BA2] bg-[#00C2CB]">
-				<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
-			</div>
+			<a href="#">
+				<div
+					class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-[#009BA2] border-[#009BA2]">
+					<a href="#">
+						<div class="px-[16px] text-xl">Login</div>
+					</a>
+				</div>
+			</a>
+
+			<a href="#">
+				<div
+					class="w-fit h-[56px] p-[16px] flex justify-center items-center border-[2px] rounded-[30px] font-inter font-bold text-white border-[#009BA2] bg-[#00C2CB]">
+					<div class="px-[16px] text-xl text-nowrap">Sign Up</div>
+				</div>
+			</a>
 		</nav>
 	</header>
 
@@ -136,8 +143,7 @@
 								</p>
 								<div
 									class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
-									<div
-										class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
+									<div class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
 										Selengkapnya</div>
 								</div>
 							</div>
@@ -159,8 +165,7 @@
 								</p>
 								<div
 									class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
-									<div
-										class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
+									<div class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
 										Selengkapnya</div>
 								</div>
 							</div>
@@ -182,8 +187,7 @@
 								</p>
 								<div
 									class="w-fit h-[48px] px-[12px] py-[16px] flex justify-center items-center border-[2px] rounded-[330px] font-inter font-bold text-[#00AFB7] border-[#00747A]">
-									<div
-										class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
+									<div class="px-[16px] gap-[10px] text-base leading-4 text-nowrap font-medium font-#00AFB7">
 										Selengkapnya</div>
 								</div>
 							</div>
@@ -196,7 +200,6 @@
 		</section>
 		<section id="2" class="px-[271px] py-[124px] flex justify-center items-center">
 			<div class="w-[898px] h-[1063px] overflow-y-auto flex flex-col scrollbar-hide gap-[80px] relative">
-				<div class="absolute w-full h-fit rounded-full bg-[#D9F6F7] z-10"></div>
 				<div class="flex flex-col justify-center items-center">
 					<p class="w-full h-fit text-center text-[25px]">Bayangkan bisa lulus cepat dengan predikat cum
 						laude, menghasilkan karya tulis yang berkualitas, dan memiliki karir yang cemerlang di bidang
@@ -274,87 +277,271 @@
 					Rp33.000/bulan! Dengan berlangganan, Zenteen akan mendapatkan akses tanpa
 					batas ke semua fitur Written!</p>
 			</div>
-			<div
-				class="rounded-[15px] mt-[105px] mb-[88px] mx-[150px] px-[88px] py-[45px] items-center justify-around bg-[#FFF6DB] shadow-custom-card2">
-				<div class="grid grid-cols-1 lg:grid-cols-4 gap-[65px]">
-					<div id="days"
-						class="flex bg-white shadow-custom-card3 justify-around w-full h-[264px] items-center rounded-[15px]">
-						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
-					</div>
-					<div id="hours"
-						class="flex bg-white shadow-custom-card3 justify-around h-[264px] items-center rounded-[15px]">
-						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
-					</div>
-					<div id="minutes"
-						class="flex bg-white shadow-custom-card3 justify-around h-[264px] items-center rounded-[15px]">
-						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
-					</div>
-					<div id="seconds"
-						class="flex bg-white shadow-custom-card3 justify-around h-[264px] items-center rounded-[15px]">
-						<h1 class="font-crimson font-bold text-9xl text-center text-[#009BA2]">00</h1>
-					</div>
-				</div>
-			</div>
 			<div class="flex flex-row gap-[50px] mt-[105px] mb-[88px] mx-[150px] justify-center">
 				<div class="flex flex-col gap-[23px] w-full justify-center">
+					<!-- Card 1 -->
 					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
-						<div class="flex flex-row gap-8 justify-evenly items-center">
+						<div class="flex flex-row gap-8 h-full items-center w-full">
 							<div><img src="assets/logo/kunci-sec-4.svg" alt="" class="w-full"></div>
-							<div>
-								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
-									premium</p>
+							<div class="flex-grow">
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px] text-[#00575B]">Akses ke semua artikel
+									premium!</p>
 							</div>
-							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+							<div><img src="assets/logo/plus-sec4.svg" alt="" class="cursor-pointer" onclick="toggleDropdown(1)"></div>
 						</div>
 					</div>
+
+					<!-- Card 2 -->
 					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
-						<div class="flex flex-row gap-8 justify-evenly items-center">
+						<div class="flex flex-row gap-8 h-full items-center w-full">
 							<div><img src="assets/logo/buku-sec4.svg" alt="" class="w-full"></div>
-							<div>
-								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
-									premium</p>
+							<div class="flex-grow">
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px] text-[#00575B]">Terbuka semua kelas tutor
+									expert akademik dan profesional</p>
 							</div>
-							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+							<div><img src="assets/logo/plus-sec4.svg" alt="" class="cursor-pointer" onclick="toggleDropdown(2)"></div>
+						</div>
+						<div class="dropdown-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out mt-4"
+							id="dropdown-sec4-2">
+							<p class="text-[#00747A]">Deskripsi dari akses ke semua artikel ini akan muncul di sini.</p>
 						</div>
 					</div>
+
+					<!-- Card 3 -->
 					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
-						<div class="flex flex-row gap-8 justify-evenly items-center">
+						<div class="flex flex-row gap-8 h-full items-center w-full">
 							<div><img src="assets/logo/dunia-sec4.svg" alt="" class="w-full"></div>
-							<div>
-								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
-									premium</p>
+							<div class="flex-grow">
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px] text-[#00575B]">Meningkatkan peluang
+									untuk mempublikasikan karya tulis</p>
 							</div>
-							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+							<div><img src="assets/logo/plus-sec4.svg" alt="" class="cursor-pointer" onclick="toggleDropdown(3)"></div>
+						</div>
+						<div class="dropdown-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out mt-4"
+							id="dropdown-sec4-3">
+							<p class="text-[#00747A]">Deskripsi dari dunia ini akan muncul di sini.</p>
 						</div>
 					</div>
+
+					<!-- Card 4 -->
 					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
-						<div class="flex flex-row gap-8 justify-evenly items-center">
+						<div class="flex flex-row gap-8 h-full items-center w-full">
 							<div><img src="assets/logo/bintang-sec4.svg" alt="" class="w-full"></div>
-							<div>
-								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
-									premium</p>
+							<div class="flex-grow">
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px] text-[#00575B]">Ruangan spesial group
+									komunitas dengan materi berkualitas</p>
 							</div>
-							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+							<div><img src="assets/logo/plus-sec4.svg" alt="" class="cursor-pointer" onclick="toggleDropdown(4)"></div>
+						</div>
+						<div class="dropdown-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out mt-4"
+							id="dropdown-sec4-4">
+							<p class="text-[#00747A]">Deskripsi dari akses ke bintang akan muncul di sini.</p>
 						</div>
 					</div>
+
+					<!-- Card 5 -->
 					<div class="w-[610px] border-2 border-[#00747A] p-6 rounded-2xl">
-						<div class="flex flex-row gap-8 justify-evenly items-center">
+						<div class="flex flex-row gap-8 h-full items-center w-full">
 							<div><img src="assets/logo/pena-sec4.svg" alt="" class="w-full"></div>
-							<div>
-								<p class="font-crimson font-bold text-[18px] leading-[22.25px]">Akses ke semua artikel
-									premium</p>
+							<div class="flex-grow">
+								<p class="font-crimson font-bold text-[18px] leading-[22.25px] text-[#00575B]">Gratis akses materi
+									terbaru</p>
 							</div>
-							<div><img src="assets/logo/plus-sec4.svg" alt=""></div>
+							<div><img src="assets/logo/plus-sec4.svg" alt="" class="cursor-pointer" onclick="toggleDropdown(5)"></div>
+						</div>
+						<div class="dropdown-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out mt-4"
+							id="dropdown-sec4-5">
+							<p class="text-[#00747A]">Deskripsi dari akses pena akan muncul di sini.</p>
 						</div>
 					</div>
 				</div>
+
 				<img src="assets/logo/oke-section4.svg" alt="" class="w-fit h-fit">
 			</div>
+
+
+			<div style="box-shadow: -12px -8px 16px 0px #359A9F inset, 24px 24px 48px 0px #00000040;"
+				class="flex justify-around items-center mt-20 mx-72 mb-36 px-8 py-6 bg-[#00C2CB] text-white leading-[47px] font-bold text-[40px] border-[#00747A] border-[2px] rounded-[330px]">
+				Belajar Sekarang!</div>
 		</section>
-		<section id="5"></section>
+		<section id="5" class="bg-gradient-to-b from-white to-[#03D8E2]">
+			<div class="flex flex-col">
+				<div class="flex justify-center mx-[191px] mt-[119px]">
+					<div class="flex flex-col gap-10 justify-center">
+						<h1 class="w-full text-center text-[52px] text-[#00575B] font-[1000] leading-[65px] font-crimson">Coba
+							Gratis Tes Gamifikasi Literasi!</h1>
+						<p class="w-full text-center text-2xl leading-[30px] text-[#00575B]">Dapatkan analisis personal yang akurat
+							tentang minat dan bakat literasi. Misalnya, kamu akan tahu apakah kamu lebih cocok di dunia bisnis,
+							sosial, atau sains.
+					</div>
+				</div>
+
+				<div class="mx-[95px] mb-5 relative flex justify-around">
+					<!-- Gambar Section 5 Gamifikasi -->
+					<img src="assets/logo/section5-gamifikasi.svg" alt="" class="w-auto z-[1] relative">
+
+					<!-- Latar Belakang Kuning -->
+					<div
+						class="bg-[#FDC412] mx-[70px] absolute mt-[280px] h-[767px] w-[1112px] rounded-[30px] z-[0] justify-center">
+					</div>
+
+					<!-- Tombol "Ungkap Bakat Tersembunyimu" -->
+					<div class="absolute z-[2] top-[60%] left-1/2 transform -translate-x-1/2">
+						<button class="bg-[#FFF9E7] flex gap-[10px] p-[30px] z-[3] items-center justify-center rounded-[30px]">
+							<h3 class="text-[34px] font-[1000] font-crimson text-[#00575B]">Ungkap Bakat Tersembunyimu!</h3>
+							<img src="assets/logo/arrow-section-5.svg" alt="">
+						</button>
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+		<section id="6" class="grid grid-cols-2">
+			<div class="flex flex-col relative">
+				<div class="flex flex-col gap-10 justify-center ml-[116px] mr-[91px] mt-40">
+					<img src="assets/logo/faq.svg" alt="" class="mx-auto">
+					<div class="flex flex-col justify-center w-ful gap-10">
+						<h1 class="font-crimson font-bold text-[52px] leading-[65px] text-[#00575B] w-full text-center">Apa Kata
+							Mereka?</h1>
+						<p class="text-xl">Baca langsung dari para penulis yang telah merasakan manfaat Writeen. Lihat bagaimana
+							platform ini membantu mereka berkembang dan membagikan karya mereka ke seluruh dunia.</p>
+					</div>
+				</div>
+				<img src="assets/logo/section-6-roket.svg" alt="" class="absolute bottom-0">
+			</div>
+			<div class="bg-[#FFF6DB] flex justify-center items-center py-24">
+				<div class="w-full h-[1600px] py-10 scrollbar-hide overflow-y-auto px-28">
+					<div class="flex flex-col gap-10">
+						<div id="comment-0" class="bg-white p-12 flex flex-col items-start rounded-2xl w-full"
+							style="box-shadow: -12px -8px 16px 0px #00000040 inset, 24px 24px 48px 0px #00000040">
+							<img src="assets/logo/quote.svg" alt="">
+							<div class="flex flex-col gap-[52px]">
+								<h2 class="text-xl font-bold text-left">Highlight Comment Here</h2>
+								<p class="text-base leading-5 text-black w-full text-justify"></p>
+								<div class="flex gap-[18px]">
+									<div class="rounded-full w-10 h-10">
+										<img src="assets/logo/pfp-dummy.png" alt="">
+									</div>
+									<div class="flex flex-col">
+										<span class="font-nunito text-[14px] leading-5 text-justify font-bold">A Clown</span>
+										<span class="font-nunito text-[14px] leading-5 text-justify">Work on Home Only</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="comment-1" class="bg-white p-12 flex flex-col items-start rounded-2xl w-full"
+							style="box-shadow: -12px -8px 16px 0px #00000040 inset, 24px 24px 48px 0px #00000040">
+							<img src="assets/logo/quote.svg" alt="">
+							<div class="flex flex-col gap-[52px]">
+								<h2 class="text-xl font-bold text-left">Highlight Comment Here</h2>
+								<p class="text-base leading-5 text-black w-full text-justify"></p>
+								<div class="flex gap-[18px]">
+									<div class="rounded-full w-10 h-10">
+										<img src="assets/logo/pfp-dummy.png" alt="">
+									</div>
+									<div class="flex flex-col">
+										<span class="font-nunito text-[14px] leading-5 text-justify font-bold">A Clown</span>
+										<span class="font-nunito text-[14px] leading-5 text-justify">Work on Home Only</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="comment-2" class="bg-white p-12 flex flex-col items-start rounded-2xl w-full"
+							style="box-shadow: -12px -8px 16px 0px #00000040 inset, 24px 24px 48px 0px #00000040">
+							<img src="assets/logo/quote.svg" alt="">
+							<div class="flex flex-col gap-[52px]">
+								<h2 class="text-xl font-bold text-left">Highlight Comment Here</h2>
+								<p class="text-base leading-5 text-black w-full text-justify"></p>
+								<div class="flex gap-[18px]">
+									<div class="rounded-full w-10 h-10">
+										<img src="assets/logo/pfp-dummy.png" alt="">
+									</div>
+									<div class="flex flex-col">
+										<span class="font-nunito text-[14px] leading-5 text-justify font-bold">A Clown</span>
+										<span class="font-nunito text-[14px] leading-5 text-justify">Work on Home Only</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="comment-3" class="bg-white p-12 flex flex-col items-start rounded-2xl w-full"
+							style="box-shadow: -12px -8px 16px 0px #00000040 inset, 24px 24px 48px 0px #00000040">
+							<img src="assets/logo/quote.svg" alt="">
+							<div class="flex flex-col gap-[52px]">
+								<h2 class="text-xl font-bold text-left">Highlight Comment Here</h2>
+								<p class="text-base leading-5 text-black w-full text-justify"></p>
+								<div class="flex gap-[18px]">
+									<div class="rounded-full w-10 h-10">
+										<img src="assets/logo/pfp-dummy.png" alt="">
+									</div>
+									<div class="flex flex-col">
+										<span class="font-nunito text-[14px] leading-5 text-justify font-bold">A Clown</span>
+										<span class="font-nunito text-[14px] leading-5 text-justify">Work on Home Only</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="comment-4" class="bg-white p-12 flex flex-col items-start rounded-2xl w-full"
+							style="box-shadow: -12px -8px 16px 0px #00000040 inset, 24px 24px 48px 0px #00000040">
+							<img src="assets/logo/quote.svg" alt="">
+							<div class="flex flex-col gap-[52px]">
+								<h2 class="text-xl font-bold text-left">Highlight Comment Here</h2>
+								<p class="text-base leading-5 text-black w-full text-justify"></p>
+								<div class="flex gap-[18px]">
+									<div class="rounded-full w-10 h-10">
+										<img src="assets/logo/pfp-dummy.png" alt="">
+									</div>
+									<div class="flex flex-col">
+										<span class="font-nunito text-[14px] leading-5 text-justify font-bold">A Clown</span>
+										<span class="font-nunito text-[14px] leading-5 text-justify">Work on Home Only</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="comment-5" class="bg-white p-12 flex flex-col items-start rounded-2xl w-full"
+							style="box-shadow: -12px -8px 16px 0px #00000040 inset, 24px 24px 48px 0px #00000040">
+							<img src="assets/logo/quote.svg" alt="">
+							<div class="flex flex-col gap-[52px]">
+								<h2 class="text-xl font-bold text-left">Highlight Comment Here</h2>
+								<p class="text-base leading-5 text-black w-full text-justify"></p>
+								<div class="flex gap-[18px]">
+									<div class="rounded-full w-10 h-10">
+										<img src="assets/logo/pfp-dummy.png" alt="">
+									</div>
+									<div class="flex flex-col">
+										<span class="font-nunito text-[14px] leading-5 text-justify font-bold">A Clown</span>
+										<span class="font-nunito text-[14px] leading-5 text-justify">Work on Home Only</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="7" class="bg-[#00C2CB] flex justify-center items-center px-40 py-96">
+			<div class="bg-[#FEEDB6] w-[1134px] h-[753px]">
+				<!-- This is the square -->
+			</div>
+		</section>
+
 	</main>
 
-	<footer></footer>
+	<footer class="bg-[#E6F9FA] w-full px-20 py-12 flex justify-center">
+		<div class="w-full flex flex-col justify-center">
+			<div class="flex gap-6 justify-center mb-6 font-bold">
+				<span>Eleven</span><span>Twelve</span><span>Thirteen</span><span>Fourteen</span>Fifteen<span>Sixteen</span>
+			</div>
+			<div class="flex gap-4 justify-center">
+				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="assets/logo/youtube.svg" alt=""></a>
+				<a href="https://facebook.com"><img src="assets/logo/facebook.svg" alt=""></a>
+				<a href="https://x.com"><img src="assets/logo/twitter.svg" alt=""></a>
+				<a href="https://www.instagram.com/writeen.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="assets/logo/instagram.svg" alt=""></a>
+				<a href="https://linkedin.com"><img src="assets/logo/linkedin.svg" alt=""></a>
+			</div>
+			<div class="text-sm text-[#00575B] font-roboto mt-12 text-center">Writeen @ 202X. All rights reserved.</div>
+		</div>
+	</footer>
 
 </body>
 
